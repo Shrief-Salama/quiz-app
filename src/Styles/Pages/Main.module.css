@@ -1,0 +1,21 @@
+.main {
+  background-color: #484c68;
+}
+
+.bottomBorderInside {
+  content: "";
+  width: 15%;
+  background: #00d7cb;
+  height: 4px;
+  margin-left: 80px;
+  animation: transform 5s linear infinite;
+}
+
+@keyframes transform {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(720px);
+  }
+}

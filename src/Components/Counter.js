@@ -1,18 +1,11 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
 
-import styles from "../Styles/Counter.module.css";
+import styles from "../Styles/Components/Counter.module.css";
 
 const Counter = () => {
   return (
     <div>
-      <Container>
-        <Row>
-          <Col>
-            <p className={styles.clockMain}>30:45</p>
-          </Col>
-        </Row>
-      </Container>
+      <p className={styles.clockMain}>30:45</p>
     </div>
   );
 };

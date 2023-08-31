@@ -4,7 +4,7 @@ import Logo from "../Components/Logo";
 import Counter from "../Components/Counter";
 import User from "../Components/User";
 
-import styles from "../Styles/Header.module.css";
+import styles from "../Styles/Layouts/Header.module.css";
 
 const Header = () => {
   return (

@@ -1,9 +1,9 @@
 .headerMain {
-  margin: 70px 0 0 80px;
+  margin: 70px 0 0 80px !important;
   background: #01041f;
   padding: 30px;
   border-radius: 25px 25px 0 0;
-  width: 90%;
+  width: 90% !important;
 }
 
 .headerContent {
