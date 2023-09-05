@@ -4,7 +4,7 @@
 
 .bottomBorderInside {
   content: "";
-  width: 15%;
+  width: 15% !important;
   background: #00d7cb;
   height: 4px;
   margin-left: 80px;
@@ -16,6 +16,6 @@
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(720px);
+    transform: translateX(855px);
   }
 }

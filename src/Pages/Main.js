@@ -1,6 +1,7 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import Header from "../Layout/Header";
+import Contents from "../Layout/Contents";
 
 import styles from "../Styles/Pages/Main.module.css";
 
@@ -13,6 +14,9 @@ const Main = () => {
         </Row>
         <Row>
           <div className={styles.bottomBorderInside}></div>
+        </Row>
+        <Row>
+          <Contents />
         </Row>
       </Container>
     </div>
