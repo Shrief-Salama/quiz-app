@@ -1,0 +1,19 @@
+.userMain {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.userIcon {
+  font-size: 2rem;
+  border: 1px solid #484c68;
+  border-radius: 50%;
+  background-color: white;
+  padding: 3px;
+}
+
+.userName {
+  margin: 0 0 0 15px;
+  text-align: end;
+  color: #bdbdbd;
+}
