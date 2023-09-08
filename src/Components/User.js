@@ -9,7 +9,7 @@ const User = () => {
   return (
     <div className={styles.userMain}>
       <GrUser className={styles.userIcon} />
-      <p className={styles.userName}>Shrief Salama</p>
+      <span className={styles.userName}>Shrief Salama</span>
     </div>
   );
 };

@@ -1,0 +1,13 @@
+.QuestNumberMain{
+    background: #01041f;
+    width: 300px;
+    border-radius: 25px;
+    transform: translateX(-100px);
+}
+
+.QuestNumberTitle{
+    color: whitesmoke;
+    padding: 15px 0 15px 30px !important;
+    font-weight: 600;
+}
+

@@ -8,7 +8,7 @@ const Logo = () => {
   return (
     <div className={styles.logoMain}>
       <GiHumanTarget className={styles.logoIcon} />
-      <p className={styles.logoName}>rapidtest</p>
+      <span className={styles.logoName}>rapidtest</span>
     </div>
   );
 };

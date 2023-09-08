@@ -1,8 +1,9 @@
 import React from "react";
 import SubHeader from "./SubHeader";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 import styles from "../Styles/Layouts/Content.module.css";
+import QuestionsNumber from "../Components/QuestionsNumber";
 
 const Contents = () => {
   return (
@@ -11,7 +12,11 @@ const Contents = () => {
         <Row>
           <SubHeader />
         </Row>
-        <Row></Row>
+        <Row>
+          <Col>
+            <QuestionsNumber />
+          </Col>
+        </Row>
       </Container>
     </div>
   );
