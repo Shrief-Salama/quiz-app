@@ -4,22 +4,25 @@ import Header from "../Layout/Header";
 import Contents from "../Layout/Contents";
 
 import styles from "../Styles/Pages/Main.module.css";
+import ApiProvider from "../Context/ApiProvider";
 
 const Main = () => {
   return (
-    <div className={styles.main}>
-      <Container>
-        <Row>
-          <Header />
-        </Row>
-        <Row>
-          <div className={styles.bottomBorderInside}></div>
-        </Row>
-        <Row>
-          <Contents />
-        </Row>
-      </Container>
-    </div>
+    <ApiProvider>
+      <div className={styles.main}>
+        <Container>
+          <Row>
+            <Header />
+          </Row>
+          <Row>
+            <div className={styles.bottomBorderInside}></div>
+          </Row>
+          <Row>
+            <Contents />
+          </Row>
+        </Container>
+      </div>
+    </ApiProvider>
   );
 };
 
