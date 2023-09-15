@@ -28,7 +28,7 @@ const SubHeader = () => {
             </p>
           </Col>
           <Col xs={2} className={styles.subHeaderBtn}>
-            <MainButton />
+            <MainButton text="Start" style="start" />
           </Col>
         </Row>
       </Container>

@@ -5,7 +5,7 @@
 .bottomBorderInside {
   content: "";
   width: 15% !important;
-  background: #00d7cb;
+  background-color: var(--blueColor);
   height: 4px;
   margin-left: 80px;
   

@@ -1,8 +1,42 @@
-.btnFinish{
-    background: #fd3054;
+.startBtn{
+    color: white;
+    background-color: #17611d;
+    padding: 5px 15px;
     border: none;
     border-radius: 5px;
+    font-weight: 500;
+}
+
+.startBtn:hover{
+    background-color: #23ad2e;
+}
+
+.finishBtn{
+    color: white;
+    font-weight: 500;
+    background-color: red;
+    border: none;
     padding: 5px 15px;
-    color: whitesmoke;
-    font-weight: 600;
+    border-radius: 5px;
+}
+
+.finishBtn:hover{
+    background-color: rgb(255, 108, 108);
+}
+
+.nextPrevBtn{
+    color: #c1c1c1;
+    background: none;
+    border: 1px solid #c1c1c1;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.nextPrevBtn:hover:enabled{
+    color: var(--blueColor);
+    border-color: var(--blueColor);
+}
+
+.nextPrevBtn:disabled{
+    opacity: .5;
 }

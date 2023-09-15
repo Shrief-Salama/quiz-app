@@ -1,0 +1,7 @@
+.questionContentMain{
+    background-color: var(--background-DarkBlue);
+    border-radius: 25px;
+    transform: translateX(-10px);
+    margin-bottom: 30px;
+}
+

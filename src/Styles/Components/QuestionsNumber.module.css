@@ -1,5 +1,5 @@
 .QuestNumberMain{
-    background: #01041f;
+    background-color: var(--background-DarkBlue);
     width: 300px;
     border-radius: 25px;
     transform: translateX(-100px);
@@ -28,7 +28,7 @@
     font-size: 15px;
     width: 30px;
     height: 30px;
-    background: #252b4b;
+    background-color: #252b4b;
     color: #c1c1c1;
     border: 1px solid #252b4b;
     border-radius: 50%;

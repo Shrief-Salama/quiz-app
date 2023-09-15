@@ -32,7 +32,7 @@
 }
 
 .questionsAnswered {
-    color: #00d7d7;
+    color: var(--blueColor);
 }
 
 .questionsReview {

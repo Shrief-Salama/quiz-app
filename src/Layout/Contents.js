@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import styles from "../Styles/Layouts/Content.module.css";
 import QuestionsNumber from "../Components/QuestionsNumber";
 import { ApiCtx } from "../Context/ApiProvider";
+import QuestionsContents from "../Components/QuestionsContents";
 
 const Contents = () => {
   const { setData } = useContext(ApiCtx);
@@ -18,6 +19,7 @@ const Contents = () => {
         ).then(async (res) => {
           const response = await res.json();
           setData(response.results);
+          // setCurrentQuestion(response.results[1].question);
         });
       } catch (error) {
         console.log(error);
@@ -33,8 +35,11 @@ const Contents = () => {
           <SubHeader />
         </Row>
         <Row>
-          <Col>
+          <Col xs={3}>
             <QuestionsNumber />
+          </Col>
+          <Col>
+            <QuestionsContents />
           </Col>
         </Row>
       </Container>
