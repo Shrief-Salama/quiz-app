@@ -4,25 +4,26 @@ import Header from "../Layout/Header";
 import Contents from "../Layout/Contents";
 
 import styles from "../Styles/Pages/Main.module.css";
-import ApiProvider from "../Context/ApiProvider";
+import HelperCtx from "../Context/Helper";
+import ProgressBar from "../Components/ProgressBar";
 
 const Main = () => {
   return (
-    <ApiProvider>
+    <HelperCtx>
       <div className={styles.main}>
         <Container>
           <Row>
             <Header />
           </Row>
           <Row>
-            <div className={styles.bottomBorderInside}></div>
+            <ProgressBar />
           </Row>
           <Row>
             <Contents />
           </Row>
         </Container>
       </div>
-    </ApiProvider>
+    </HelperCtx>
   );
 };
 

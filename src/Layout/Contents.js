@@ -7,6 +7,8 @@ import QuestionsNumber from "../Components/QuestionsNumber";
 import { ApiCtx } from "../Context/ApiProvider";
 import QuestionsContents from "../Components/QuestionsContents";
 
+import { v4 as uuidv4 } from "uuid";
+
 const Contents = () => {
   const { setData } = useContext(ApiCtx);
 
@@ -18,13 +20,23 @@ const Contents = () => {
           { method: "GET" }
         ).then(async (res) => {
           const response = await res.json();
-          setData(response.results);
-          // setCurrentQuestion(response.results[1].question);
+          const newResults = response.results.map((result) => ({
+            ...result,
+            allAnswers: [
+              ...result.incorrect_answers,
+              result.correct_answer,
+            ].map((answer) => {
+              const id = uuidv4();
+              return { answer, id };
+            }),
+          }));
+          setData(newResults);
         });
       } catch (error) {
         console.log(error);
       }
     };
+
     dataArr();
   }, [setData]);
 

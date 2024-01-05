@@ -29,12 +29,93 @@
     width: 30px;
     height: 30px;
     background-color: #252b4b;
-    color: #c1c1c1;
+    color: var(--lightGray);
     border: 1px solid #252b4b;
     border-radius: 50%;
 }
 
 .QuestionNumber:hover{
-    background: white;
+    background-color: white;
     color: #121532;
+}
+
+.QuestionNumberAnswered{
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: #252b4b;
+    color: var(--lightGray);
+    border: 1px solid var(--blueColor);
+    border-radius: 50%;
+}
+
+.QuestionNumberAnswered:hover{
+    background-color: var(--blueColor);
+    color: #121532;
+}
+
+.QuestionNumber:disabled{
+    opacity: .5;
+}
+
+.QuestionNumber:disabled:hover{
+    background-color: #252b4b;
+    color: var(--lightGray);
+}
+
+.QuestionNumberSkipped{
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: #252b4b;
+    color: var(--lightGray);
+    border: 1px solid var(--orangeColor);
+    border-radius: 50%;
+}
+
+
+.QuestionNumberSkipped:hover{
+    background-color: var(--orangeColor);
+    color: #121532;
+}
+
+.QuestionNumberMarked{
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: #252b4b;
+    color: var(--yellowColor);
+    border: 1px solid var(--yellowColor);
+    border-radius: 50%;
+}
+
+.QuestionNumberMarkedAndAnswered{
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: #252b4b;
+    color: var(--yellowColor);
+    border: 1px solid var(--blueColor);
+    border-radius: 50%;
+    
+}
+
+.QuestionNumberMarkedAndAnswered:hover{
+    background-color: var(--yellowColor);
+    color: black;
+}
+
+.QuestionNumberMarkedAndSkipped{
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: #252b4b;
+    color: var(--yellowColor);
+    border: 1px solid var(--orangeColor);
+    border-radius: 50%;
+}
+
+.QuestionNumberMarkedAndSkipped:hover{
+    background-color: var(--yellowColor);
+    color: black;
 }

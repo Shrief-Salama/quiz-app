@@ -1,0 +1,73 @@
+.loginMainPage{
+    background-color: var(--mainBackground);
+    padding: 100px;
+    background-size: cover;
+}
+
+.loginPageContainer{
+    background-color: var(--background-DarkBlue);
+    width: 50% !important;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    padding: 16px !important;
+}
+
+.loginPageHeader{
+    color: white;
+    text-align: center;
+    padding: 35px 0;
+}
+
+.loginPageHeader span {
+    color: red;
+}
+
+.loginUserName{
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 0 20px 100px !important;
+}
+
+.loginUserName label {
+    font-size: 20px;
+    text-transform: capitalize;
+    padding-right: 30px;
+}
+
+.loginUserName input {
+    width: 230px;
+    padding-left: 10px;
+    background-color: var(--mainBackground);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.loginGender{
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 0 20px 100px !important;
+}
+
+.loginGender label {
+    font-size: 20px;
+    text-transform: capitalize;
+    padding-right: 20px;
+}
+
+.loginGender select {
+    width: 230px;
+    background-color: var(--mainBackground);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.loginStartButton{
+    padding: 35px 0 50px;
+    justify-content: center;
+}

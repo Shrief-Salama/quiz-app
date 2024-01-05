@@ -2,26 +2,32 @@ import React, { useContext } from "react";
 
 import styles from "../Styles/Components/QuestionsContents.module.css";
 
-import { Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import QuestionsActions from "./QuestionsActions";
 import Questions from "./Questions";
 import Answers from "./Answers";
+import { ApiCtx } from "../Context/ApiProvider";
 
 const QuestionsContents = () => {
+  const { singleQuestion, currentQuestion } = useContext(ApiCtx);
+
   return (
-    <div className={styles.questionContentMain}>
+    <section className={styles.questionContentMain}>
       <Container>
-        <Row>
-          <Questions />
-        </Row>
-        <Row>
-          <Answers />
-        </Row>
-        <Row>
+        <div>
+          <Questions
+            singleQuestion={singleQuestion}
+            currentQuestion={currentQuestion}
+          />
+        </div>
+        <div>
+          <Answers singleQuestion={singleQuestion} />
+        </div>
+        <div>
           <QuestionsActions />
-        </Row>
+        </div>
       </Container>
-    </div>
+    </section>
   );
 };
 

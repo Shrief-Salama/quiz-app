@@ -1,34 +1,59 @@
 import React, { useContext } from "react";
-import { ApiCtx } from "../Context/ApiProvider";
+
 import decoder from "html-entities-decoder";
 
 import styles from "../Styles/Components/Answer.module.css";
+import { Col, Container, Row } from "react-bootstrap";
 
-const Answers = () => {
-  const { data, currentQuestion } = useContext(ApiCtx);
+import { ApiCtx } from "../Context/ApiProvider";
 
-  //Combin Answers
-  const combinAnswers = () => {
-    return data.map((quest) => {
-      const allAnswers = [...quest.incorrect_answers, quest.correct_answer];
-      return { ...quest, allAnswers };
-    });
-  };
-
-  const newData = combinAnswers();
-
-  const fixedNewData = newData[currentQuestion];
+const Answers = ({ singleQuestion }) => {
+  const {
+    setMarkedAnswers,
+    markedAnswer,
+    currentQuestion,
+    correctAnswers,
+    setCorrectAnswers,
+  } = useContext(ApiCtx);
 
   const ansNumber = ["A", "B", "C", "D"];
+
+  const toggleHandler = (answer) => {
+    setMarkedAnswers({
+      ...markedAnswer,
+      [currentQuestion]: decoder(answer.answer),
+    });
+    setCorrectAnswers(() => {
+      if (answer.answer === singleQuestion.correct_answer) {
+        return { ...correctAnswers, [currentQuestion]: decoder(answer.answer) };
+      } else {
+        return { ...correctAnswers };
+      }
+    });
+  };
 
   return (
     <div className={styles.answersMain}>
       <ul className={styles.answersListMain}>
-        {fixedNewData &&
-          fixedNewData.allAnswers.map((ans, index) => (
-            <li key={index} className={styles.answersList}>
-              <span className={styles.answersNumber}>{ansNumber[index]}</span>
-              <span className={styles.answer}>{decoder(ans)}</span>
+        {singleQuestion &&
+          singleQuestion.allAnswers.map((answer, index) => (
+            <li
+              key={answer.id}
+              className={
+                markedAnswer[currentQuestion] === decoder(answer.answer)
+                  ? `${styles.answersListActive}`
+                  : `${styles.answersListInActive}`
+              }
+              onClick={() => toggleHandler(answer)}
+            >
+              <Container>
+                <Row>
+                  <Col xs={2} className={styles.answersNumber}>
+                    {ansNumber[index]}
+                  </Col>
+                  <Col className={styles.answer}>{decoder(answer.answer)}</Col>
+                </Row>
+              </Container>
             </li>
           ))}
       </ul>
