@@ -39,12 +39,17 @@
     border: 1px solid var(--blueColor);
 }
 
+.answersContent{
+    align-content: center;
+    align-items: center;
+}
+
 .answersNumber{
     padding: 8px;
     margin: 0 10px;
     color: var(--lightGray);
     display: inline-block;
-    width: 35px;
+    width: 35px !important;
     height: 35px;
     background-color: var(--background-DarkBlue);
     border-radius: 50%;

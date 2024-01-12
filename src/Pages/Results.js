@@ -19,63 +19,51 @@ const Results = () => {
             <Col className={styles.resultsDetails}>
               <div className={styles.resultsContent}>
                 <div className={styles.resultsQuestionsTitle}>
-                  <div className={styles.resultsQuestionContent}>
-                    <p>Questions :</p>
-                    <span className={styles.resultsQuestionsLength}>
-                      {localStorage.getItem("questions")}
-                    </span>
-                  </div>
+                  <p>Questions :</p>
+                  <span className={styles.resultsQuestionsLength}>
+                    {localStorage.getItem("questions")}
+                  </span>
                 </div>
                 <div className={styles.resultsQuestionsTitle}>
-                  <div className={styles.resultsQuestionContent}>
-                    <p>Answered :</p>
-                    <span className={styles.resultsQuestionsAnswered}>
-                      {localStorage.getItem("answered")}
-                    </span>
-                  </div>
+                  <p>Answered :</p>
+                  <span className={styles.resultsQuestionsAnswered}>
+                    {localStorage.getItem("answered")}
+                  </span>
                 </div>
                 <div className={styles.resultsQuestionsTitle}>
-                  <div className={styles.resultsQuestionContent}>
-                    <p>Skipped : </p>
-                    <span className={styles.resultsQuestionsSkipped}>
-                      {localStorage.getItem("skipped")}
-                    </span>
-                  </div>
+                  <p>Skipped : </p>
+                  <span className={styles.resultsQuestionsSkipped}>
+                    {localStorage.getItem("skipped")}
+                  </span>
                 </div>
                 <div className={styles.resultsQuestionsTitle}>
-                  <div className={styles.resultsQuestionContent}>
-                    <p>Marked For Review :</p>
-                    <span className={styles.resultsQuestionsMarked}>
-                      {localStorage.getItem("markedForReview")}
-                    </span>
-                  </div>
+                  <p>Marked For Review :</p>
+                  <span className={styles.resultsQuestionsMarked}>
+                    {localStorage.getItem("markedForReview")}
+                  </span>
                 </div>
                 <div className={styles.resultsQuestionsTitle}>
-                  <div className={styles.resultsQuestionContent}>
-                    <p>Correct Answers :</p>
-                    <span className={styles.resultsQuestionsCorrectAnswers}>
-                      {localStorage.getItem("correctAnswers")}
-                    </span>
-                  </div>
+                  <p>Correct Answers :</p>
+                  <span className={styles.resultsQuestionsCorrectAnswers}>
+                    {localStorage.getItem("correctAnswers")}
+                  </span>
                 </div>
               </div>
             </Col>
-            <Col>
-              <div className={styles.resultsFinalContent}>
-                <div className={styles.resultsQuestionsTitle}>
-                  <p>Final Results</p>
-                </div>
-                <div className={styles.finalResultsPercentage}>
-                  <p
-                    className={
-                      dynamicFinalResults > 50
-                        ? styles.finalResultsPercentageContentSuccess
-                        : styles.finalResultsPercentageContentFailed
-                    }
-                  >
-                    {dynamicFinalResults}%
-                  </p>
-                </div>
+            <Col className={styles.resultsFinalContent}>
+              <div className={styles.finalResultsTitle}>
+                <p>Final Result</p>
+              </div>
+              <div className={styles.finalResultsPercentage}>
+                <p
+                  className={
+                    dynamicFinalResults > 50
+                      ? styles.finalResultsPercentageContentSuccess
+                      : styles.finalResultsPercentageContentFailed
+                  }
+                >
+                  {dynamicFinalResults}%
+                </p>
               </div>
             </Col>
           </div>

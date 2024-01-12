@@ -7,8 +7,9 @@ import { Col, Container, Row } from "react-bootstrap";
 
 import { ApiCtx } from "../Context/ApiProvider";
 
-const Answers = ({ singleQuestion }) => {
+const Answers = () => {
   const {
+    singleQuestion,
     setMarkedAnswers,
     markedAnswer,
     currentQuestion,
@@ -47,7 +48,7 @@ const Answers = ({ singleQuestion }) => {
               onClick={() => toggleHandler(answer)}
             >
               <Container>
-                <Row>
+                <Row className={styles.answersContent}>
                   <Col xs={2} className={styles.answersNumber}>
                     {ansNumber[index]}
                   </Col>

@@ -69,7 +69,7 @@ const QuestionsActions = () => {
               onChange={() => checkHandler(currentQuestion)}
               checked={isMarked}
             />
-            <label htmlFor="check">Mark For Review</label>
+            <label htmlFor={currentQuestion}>Mark For Review</label>
           </Col>
           <Col>
             <MainButton

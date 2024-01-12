@@ -27,31 +27,19 @@ const QuestionsNumber = () => {
   };
 
   const styleHandler = (index) => {
-    if (
-      Object.keys(markedAnswer).includes(`${index}`) &&
-      !checkedQuestion.includes(index)
-    ) {
+    const questionsAnswered = Object.keys(markedAnswer).includes(`${index}`);
+    const questionsSkipped = skippedQuestions.includes(`${index}`);
+    const questionsMarked = checkedQuestion.includes(index);
+
+    if (questionsAnswered && !questionsMarked) {
       return styles.QuestionNumberAnswered;
-    } else if (
-      skippedQuestions.includes(`${index}`) &&
-      !checkedQuestion.includes(index)
-    ) {
+    } else if (questionsSkipped && !questionsMarked) {
       return styles.QuestionNumberSkipped;
-    } else if (
-      checkedQuestion.includes(index) &&
-      !skippedQuestions.includes(`${index}`) &&
-      !Object.keys(markedAnswer).includes(`${index}`)
-    ) {
+    } else if (questionsMarked && !questionsSkipped && !questionsAnswered) {
       return styles.QuestionNumberMarked;
-    } else if (
-      checkedQuestion.includes(index) &&
-      Object.keys(markedAnswer).includes(`${index}`)
-    ) {
+    } else if (questionsMarked && questionsAnswered) {
       return styles.QuestionNumberMarkedAndAnswered;
-    } else if (
-      checkedQuestion.includes(index) &&
-      skippedQuestions.includes(`${index}`)
-    ) {
+    } else if (questionsMarked && questionsSkipped) {
       return styles.QuestionNumberMarkedAndSkipped;
     } else {
       return styles.QuestionNumber;
