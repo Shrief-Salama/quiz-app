@@ -1,14 +1,7 @@
 .main {
-  background-color: #484c68;
+  background-color: var(--mainBackground);
 }
 
-.bottomBorderInside {
-  content: "";
-  width: 15% !important;
-  background: #00d7cb;
-  height: 4px;
-  margin-left: 80px;
-  
-}
+
 
 

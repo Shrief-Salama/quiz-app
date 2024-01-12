@@ -9,7 +9,7 @@
 
 .subHeaderContents p{
     margin: 0;
-    color: #9d9d9d;
+    color: var(--lightGray);
     font-size: 13px;
 }
 
@@ -32,15 +32,15 @@
 }
 
 .questionsAnswered {
-    color: #00d7d7;
+    color: var(--blueColor);
 }
 
 .questionsReview {
-    color: yellow;
+    color: var(--yellowColor);
 }
 
 .questionsSkipped {
-    color: orange;
+    color: var(--orangeColor);
 }
 
 .subHeaderBtn{

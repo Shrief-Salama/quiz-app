@@ -5,6 +5,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import styles from "../Styles/Layouts/Content.module.css";
 import QuestionsNumber from "../Components/QuestionsNumber";
 import { ApiCtx } from "../Context/ApiProvider";
+import QuestionsContents from "../Components/QuestionsContents";
+
+import { v4 as uuidv4 } from "uuid";
 
 const Contents = () => {
   const { setData } = useContext(ApiCtx);
@@ -17,12 +20,23 @@ const Contents = () => {
           { method: "GET" }
         ).then(async (res) => {
           const response = await res.json();
-          setData(response.results);
+          const newResults = response.results.map((result) => ({
+            ...result,
+            allAnswers: [
+              ...result.incorrect_answers,
+              result.correct_answer,
+            ].map((answer) => {
+              const id = uuidv4();
+              return { answer, id };
+            }),
+          }));
+          setData(newResults);
         });
       } catch (error) {
         console.log(error);
       }
     };
+
     dataArr();
   }, [setData]);
 
@@ -33,8 +47,11 @@ const Contents = () => {
           <SubHeader />
         </Row>
         <Row>
-          <Col>
+          <Col xs={3}>
             <QuestionsNumber />
+          </Col>
+          <Col>
+            <QuestionsContents />
           </Col>
         </Row>
       </Container>

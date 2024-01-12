@@ -1,0 +1,62 @@
+.answersMain{
+    margin: 40px 0 !important;
+}
+
+.answersListMain{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-left: 0 !important;
+}
+
+.answersListInActive{
+    list-style: none;
+    border-radius: 10px;
+    margin: 0 0 15px 15px;
+    padding: 5px;
+    background-color: var(--lightPurple);
+    color: var(--lightGray);
+    font-weight: 600;
+    font-size: 12px;
+    max-width: 300px;
+    max-height: 45px;
+    min-width: 300px;
+    min-height: 45px;
+}
+
+.answersListActive{
+    list-style: none;
+    border-radius: 10px;
+    margin: 0 0 15px 15px;
+    padding: 5px;
+    background-color: var(--lightPurple);
+    color: var(--lightGray);
+    font-weight: 600;
+    font-size: 12px;
+    max-width: 300px;
+    max-height: 45px;
+    min-width: 300px;
+    min-height: 45px;
+    border: 1px solid var(--blueColor);
+}
+
+.answersContent{
+    align-content: center;
+    align-items: center;
+}
+
+.answersNumber{
+    padding: 8px;
+    margin: 0 10px;
+    color: var(--lightGray);
+    display: inline-block;
+    width: 35px !important;
+    height: 35px;
+    background-color: var(--background-DarkBlue);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.answer{
+    width: 300px;
+}

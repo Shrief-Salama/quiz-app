@@ -1,6 +1,6 @@
 .headerMain {
   margin: 70px 0 0 80px !important;
-  background: #01041f;
+  background-color: var(--background-DarkBlue);
   padding: 30px;
   border-radius: 25px 25px 0 0;
   width: 90% !important;

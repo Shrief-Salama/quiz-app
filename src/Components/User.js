@@ -8,8 +8,13 @@ import styles from "../Styles/Components/User.module.css";
 const User = () => {
   return (
     <div className={styles.userMain}>
-      <GrUser className={styles.userIcon} />
-      <span className={styles.userName}>Shrief Salama</span>
+      {localStorage.getItem("gender") === "male" ? (
+        <GrUser className={styles.userIcon} />
+      ) : (
+        <GrUserFemale className={styles.userIcon} />
+      )}
+
+      <span className={styles.userName}>{localStorage.getItem("name")}</span>
     </div>
   );
 };

@@ -1,0 +1,23 @@
+.questionsActionsMain{
+    padding: 20px 15px 20px 15px;
+}
+
+.questionsActionsRow{
+    display: flex;
+    align-items: center;
+}
+
+.questionsMarkReview{
+    display: flex;
+    align-items: center;
+}
+
+.questionsMarkReview input{
+    width: 18px;
+    height: 18px;
+}
+
+.questionsMarkReview label{
+    margin-left: 10px;
+    color: var(--lightGray);
+}
