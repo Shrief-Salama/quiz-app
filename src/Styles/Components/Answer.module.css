@@ -12,7 +12,7 @@
     list-style: none;
     border-radius: 10px;
     margin: 0 0 15px 15px;
-    padding: 5px;
+    padding: 5px 5px 5px 10px;
     background-color: var(--lightPurple);
     color: var(--lightGray);
     font-weight: 600;
@@ -21,22 +21,12 @@
     max-height: 45px;
     min-width: 300px;
     min-height: 45px;
+    cursor: pointer;
+    border: 1px solid transparent;
 }
 
 .answersListActive{
-    list-style: none;
-    border-radius: 10px;
-    margin: 0 0 15px 15px;
-    padding: 5px;
-    background-color: var(--lightPurple);
-    color: var(--lightGray);
-    font-weight: 600;
-    font-size: 12px;
-    max-width: 300px;
-    max-height: 45px;
-    min-width: 300px;
-    min-height: 45px;
-    border: 1px solid var(--blueColor);
+    border-color:var(--blueColor);
 }
 
 .answersContent{

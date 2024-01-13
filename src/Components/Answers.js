@@ -42,19 +42,17 @@ const Answers = () => {
               key={answer.id}
               className={
                 markedAnswer[currentQuestion] === decoder(answer.answer)
-                  ? `${styles.answersListActive}`
+                  ? `${styles.answersListActive} ${styles.answersListInActive}`
                   : `${styles.answersListInActive}`
               }
               onClick={() => toggleHandler(answer)}
             >
-              <Container>
-                <Row className={styles.answersContent}>
-                  <Col xs={2} className={styles.answersNumber}>
-                    {ansNumber[index]}
-                  </Col>
-                  <Col className={styles.answer}>{decoder(answer.answer)}</Col>
-                </Row>
-              </Container>
+              <Row className={styles.answersContent}>
+                <Col xs={2} className={styles.answersNumber}>
+                  {ansNumber[index]}
+                </Col>
+                <Col className={styles.answer}>{decoder(answer.answer)}</Col>
+              </Row>
             </li>
           ))}
       </ul>
